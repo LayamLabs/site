@@ -1,8 +1,0 @@
-{
-  "kind": "rollBackToEmbedded",
-  "directive": "{\"type\":\"rollBackToEmbedded\",\"parameters\":{\"commitTime\":\"2026-10-18T10:13:38.578Z\"}}",
-  "signature": "sig=\"QQJCHLyROwBJ5cTIxsFXMihJ7nobW6q+clJIpTKQrzRLf/B0N8InAtkXGDT9Mb4vktkv/YzwsycSqZPMAoRPsGtFVYp2sCdOMcscy6WOHv6hXWwHJ6NYDfn5jEGlQJxBrPWvtGWLwqQfLHQly9NvlM+4DOW3+mAi7dUyrFUL42fM4ivNBGsiHJHUE9pBM0Yo6fCZ7z1r2i1ZIH6ti6hXsvQElp3141pzXJjqrexM3Lzz/DO81963s9HwbWxYkBbzcrioAhtiAcKZirFdhnCiiYPORGoRhMOfE8VAzhpkNKCmRUgaGtyZ14QEb6KMBk2rkpYfOsolzONgsctP5gAnQQ==\", keyid=\"main\"",
-  "publishedAt": "2026-10-18T10:13:38.578Z",
-  "gitCommit": null,
-  "message": "QA: propagation timing"
-}

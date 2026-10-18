@@ -90,6 +90,8 @@
 <p>If you never use the scanner, no photo is ever sent. Photos of pages you save in your library are kept on your phone (section 7).</p>
 <h3 id="6-4-one-other-request">6.4 One other request</h3>
 <p>The app draws sheet music with a library built into it. If that built-in copy cannot be read, the app downloads the same library from a public content network (<code>cdn.jsdelivr.net</code>). That request sends nothing about you, but like any web request it shows your internet address to the network. All the music in the catalogue is built into the app; the app does not download pieces.</p>
+<h3 id="6-5-update-and-settings-checks">6.5 Update and settings checks</h3>
+<p>When your phone is online, the app checks for app updates and for remote settings (switches that turn a feature on or off). Update checks send a random ID made for this install; our update server does not log it. Settings checks go to PostHog, our analytics provider, and send no ID, only your device type (Android version, processor features and app version); PostHog receives your internet address but does not use it for location. Neither check is linked to your usage statistics, and both run for every user, including children under 13.</p>
 <h2 id="7-what-stays-on-your-phone">7. What stays on your phone</h2>
 <ul>
 <li>Your profile: experience level, daily goal, what you want to work on, and your assessment results. No name, email or age.</li>

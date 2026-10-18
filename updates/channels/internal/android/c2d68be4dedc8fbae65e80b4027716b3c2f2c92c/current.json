@@ -1,8 +1,0 @@
-{
-  "kind": "rollBackToEmbedded",
-  "directive": "{\"type\":\"rollBackToEmbedded\",\"parameters\":{\"commitTime\":\"2026-10-18T11:13:16.452Z\"}}",
-  "signature": "sig=\"AHBVYlTsm2ofK3HwPLKfk5nqZgKJsY5CmnisdpSsejHUu9KlkNpWvF2uJOxHb6tOyQwo0u/47Fj/7lvBf37RU3/VbWaxwkYWTRnjcEA7lPHzKw6RbAhRdp/Vx7/aJ0ppj8nrQGuAteNr5gDRPa2VyAvscxLrJxyq5iab+0EH4NeSH62kBSGQs/nlxI9x3NHhoycErbZ0ufvW2aiB3SzwXdoEz9MITyD1jVWADQCga5JIndi2yE2ChQzLgGBUIlR2XaHCHSL5jTTWcE0Fhs8lodk7cQxnXTYYNbAIUcsThnuDGhtdD2U8/FwqZU1HDFXg89btOhknov1kRniNuMHKAQ==\", keyid=\"main\"",
-  "publishedAt": "2026-10-18T11:13:16.452Z",
-  "gitCommit": "142416ee96199f5023e5286902d1f4e644775c78",
-  "message": "Worker E2E test 3 rollback"
-}

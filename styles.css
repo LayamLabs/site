@@ -1,0 +1,72 @@
+/* Layam Labs site. No web fonts, no scripts, no outside requests. */
+:root {
+  --bg: #fbf8f2;
+  --fg: #1e1a14;
+  --muted: #5b5247;
+  --rule: #ddd3c3;
+  --accent: #8a5a1f;
+  --code-bg: #f1eadc;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14110e;
+    --fg: #ece4d6;
+    --muted: #b3a895;
+    --rule: #3a322a;
+    --accent: #e0aa5c;
+    --code-bg: #241e18;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+a { color: var(--accent); text-underline-offset: 0.15em; }
+a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+header.site, footer.site, main {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+header.site { padding-top: 1.25rem; padding-bottom: 0.5rem; }
+.brand { font-weight: bold; text-decoration: none; color: var(--fg); letter-spacing: 0.02em; }
+footer.site {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+h1 { font-size: 2rem; line-height: 1.2; margin: 1.5rem 0 0.75rem; }
+h2 { font-size: 1.375rem; margin: 2.25rem 0 0.5rem; }
+h3 { font-size: 1.125rem; margin: 1.5rem 0 0.25rem; }
+p, ul, ol { margin: 0 0 0.9rem; }
+ul, ol { padding-left: 1.4rem; }
+li { margin: 0.25rem 0; }
+code {
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  font-size: 0.9em;
+  background: var(--code-bg);
+  padding: 0.05em 0.3em;
+  border-radius: 3px;
+  overflow-wrap: anywhere;
+}
+blockquote {
+  margin: 1rem 0;
+  padding: 0.25rem 1rem;
+  border-left: 4px solid var(--accent);
+  background: var(--code-bg);
+}
+.table { overflow-x: auto; margin: 0 0 1rem; }
+table { border-collapse: collapse; width: 100%; font-size: 0.9375rem; }
+th, td { text-align: left; vertical-align: top; padding: 0.45rem 0.5rem; border-bottom: 1px solid var(--rule); }
+th { border-bottom-width: 2px; }
+.lead { font-size: 1.1875rem; color: var(--muted); }

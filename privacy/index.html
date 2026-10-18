@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rosin Privacy Policy, Layam Labs</title>
+<meta name="description" content="How the Rosin violin practice app handles your data.">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<!-- Generated from docs/legal/privacy-policy-draft.md by scripts/legal/build-policy-page.mjs. Edit the markdown, not this file. -->
+<header class="site"><a class="brand" href="../">Layam Labs</a></header>
+<main class="doc">
+<h1>Rosin Privacy Policy</h1>
+<p><strong>Version:</strong> 2026-10-18. <strong>Effective:</strong> 18 October 2026.<br>
+<strong>Applies to:</strong> Rosin for Android, package <code>com.rosin.app</code>.</p>
+<h2 id="1-who-we-are">1. Who we are</h2>
+<p>Rosin is a violin practice app published by <strong>Layam Labs</strong>, a sole proprietorship of Swaminathan Ravikumar, based in Bengaluru, India. In this policy &quot;we&quot; and &quot;us&quot; mean Layam Labs.</p>
+<p>Under India's Digital Personal Data Protection Act, 2023 (the &quot;DPDP Act&quot;), we are the Data Fiduciary for the personal data described here.</p>
+<p><strong>Contact and Grievance Officer:</strong> Swaminathan Ravikumar, <a href="mailto:info@layamlabs.com">info@layamlabs.com</a>.</p>
+<h2 id="2-the-short-version">2. The short version</h2>
+<ul>
+<li>Rosin has no accounts. We never ask for your name, email address, phone number or location. The first screen asks when you were born (month and year) and keeps only an age range on your phone, never the date.</li>
+<li>Rosin listens to your violin to tell you whether you are in tune. That sound is analysed on your phone and is never sent anywhere.</li>
+<li>Your practice history, scores and settings are stored on your phone.</li>
+<li>Three things can leave your phone:<ol><li>anonymous usage statistics, which are on by default from age 13 and can be turned off in Settings. For anyone under 13 they are off and cannot be turned on;</li><li>a bug report, only if you write one and send it;</li><li>a photo of sheet music, only if you use the scanner.</li></ol></li>
+<li>No ads, no advertising ID, and we do not sell or rent data to anyone.</li>
+</ul>
+<h2 id="3-who-can-use-rosin">3. Who can use Rosin</h2>
+<p>Rosin is for violinists of every age, children included.</p>
+<p>The first time you open the app (and again only if this policy changes in a way that affects what we collect or who receives it), you see one screen. It asks <strong>When were you born?</strong> with two empty boxes, month and year. From the answer the app works out an age range, under 13, 13 to 17, or 18 and over, and stores only that range on your phone. The month and year themselves are not stored and never leave your phone.</p>
+<ul>
+<li><strong>Under 18:</strong> a box appears that reads &quot;A parent or guardian is setting this up, or has agreed to me using Rosin.&quot; It must be ticked to continue.</li>
+<li><strong>Everyone:</strong> the screen says &quot;By tapping Agree and continue, you agree to the Privacy Policy.&quot; Tapping <strong>Agree and continue</strong> is how you give that agreement.</li>
+</ul>
+<p>When you tap it, the app stores on your phone the version of this policy you agreed to, the time you agreed, the age range and whether the parent or guardian box was ticked. From age 13, if usage statistics are on, the app also reports that the screen was accepted, with the policy version and the age range (never the date). Nothing about this screen is sent for anyone under 13.</p>
+<p>Usage statistics do not start until you have tapped Agree and continue, and never start for anyone under 13. A parent or guardian can change the age range later in Settings, Privacy, Age range. See section 12 for children.</p>
+<h2 id="4-permissions-the-app-asks-for">4. Permissions the app asks for</h2>
+<div class="table"><table>
+<thead><tr><th scope="col">Permission</th><th scope="col">Why</th><th scope="col">What happens if you refuse</th></tr></thead>
+<tbody><tr><td>Microphone (<code>RECORD_AUDIO</code>)</td><td>To hear your violin for the tuner and scored practice</td><td>The tuner and scored practice do not work; the rest of the app does</td></tr>
+<tr><td>Camera (<code>CAMERA</code>)</td><td>To photograph a page of sheet music for the scanner</td><td>You can still import a photo with the system photo picker, or not use the scanner</td></tr>
+<tr><td>Internet (<code>INTERNET</code>)</td><td>To send usage statistics, bug reports and scanned photos as described below</td><td>Granted by Android at install</td></tr></tbody>
+</table></div>
+<p>The app also uses permissions Android grants without asking, to control audio output (<code>MODIFY_AUDIO_SETTINGS</code>) and to vibrate on a button press (<code>VIBRATE</code>). It does not ask for your location, contacts, files, calendar, messages or call log.</p>
+<h2 id="5-your-microphone">5. Your microphone</h2>
+<ul>
+<li>Sound is captured only while a screen that needs it is open, at 16,000 samples per second in mono.</li>
+<li>It is analysed on your phone by a pitch-detection model built into the app. No part of the sound is sent to a server.</li>
+<li>The analysis produces small readings (a frequency, the nearest note, how many cents sharp or flat, a confidence and a loudness value). Those readings are used on your phone to colour notes and calculate scores. They are not sent anywhere.</li>
+<li>The published app does not save your playing to a file.</li>
+<li>What usage statistics may include is a summary after the fact, such as &quot;a practice session ran for 7 minutes and 82% of notes were within tolerance&quot;. Never sound, and never the note-by-note readings.</li>
+</ul>
+<h2 id="6-what-leaves-your-phone-and-when">6. What leaves your phone, and when</h2>
+<h3 id="6-1-anonymous-usage-statistics-on-by-default-from-age-13-you-can-turn-them-off">6.1 Anonymous usage statistics (on by default from age 13, you can turn them off)</h3>
+<p><strong>Under 13 none of this happens.</strong> The app does not start the statistics, makes no identifier and sends nothing to PostHog; the Settings switch is shown off and cannot be turned on. If the age range is changed to under 13 later, sending stops at once and anything waiting to be sent is discarded.</p>
+<p>From age 13, after you have agreed on the first screen, and while **Share usage data &amp; bug reports** is on in Settings, the app sends small events to PostHog, an analytics service that processes them for us. Each event carries:</p>
+<ul>
+<li>a random identifier for your installation, such as <code>anon_k3f9x2p1q8w4z7</code>. The app makes it from a random number. It is not taken from your phone, your Google account or anything about you, it is not an advertising ID, and reinstalling the app makes a new one. Settings shows it under Privacy so you can quote it to us;</li>
+<li>the platform (Android), the Android version, and whether the app is a developer build;</li>
+<li>the event's name and a few properties, at most 1,024 bytes per event.</li>
+</ul>
+<p>The events record:</p>
+<ul>
+<li><strong>what you did:</strong> a screen was opened, a practice session started, finished or was stopped early (with the piece, the mode and the tempo), the tuner was used, an onboarding step was completed, a loop was set;</li>
+<li><strong>how it went, in totals:</strong> a session's accuracy, a run's intonation summary, an assessment score. Totals only, never a note-by-note stream;</li>
+<li><strong>what went wrong:</strong> the audio engine fell back, pitch detection degraded, a save failed, a scan came back unclear, a score could not be calculated.</li>
+</ul>
+<p>The events are sent over HTTPS to PostHog's US ingestion address, <code>https://us.i.posthog.com</code>. The app does not contain PostHog's software kit; it sends plain web requests carrying only the fields above. We have switched off session replay, screen recording, automatic capture, console and network capture, heatmaps and surveys in our PostHog project.</p>
+<p>PostHog, like any server, sees the internet (IP) address a request comes from. Our project is set to discard it, so IP addresses are not stored with events, and we have switched off PostHog's location lookup, so no country, city or coordinates are derived from it.</p>
+<p>If you turn the switch off, sending stops at once and anything waiting to be sent is discarded. Practice tracking on your phone (your history, streaks and progress) keeps working either way, because it never leaves your phone.</p>
+<h3 id="6-2-bug-reports-only-when-you-send-one">6.2 Bug reports (only when you send one)</h3>
+<p>Settings has <strong>Report a bug</strong>. Before anything is sent, the app shows you the whole report; what you see is what is sent. A report contains:</p>
+<ul>
+<li>the description you typed, exactly as you typed it. Please do not type anything you would not want us to read;</li>
+<li>the severity you chose and the screen you were on;</li>
+<li>a snapshot of the app's internal state, such as which audio output and pitch engine were in use;</li>
+<li>up to the last 200 events, so we can see what led to the problem.</li>
+</ul>
+<p>Before it is sent, everything the app collected (not your typed description) is cleaned: titles, file names, search text and similar free text are replaced by a note of their length, and the account-name part of file paths is replaced by a placeholder. A report is at most 50,000 bytes.</p>
+<p>Bug reports go to PostHog with the usage statistics. If usage statistics are off, or have not started, or the age range is under 13, the report is copied to your phone's clipboard instead and nothing is sent; you decide whether to paste it into an email to us.</p>
+<h3 id="6-3-photos-of-sheet-music-only-when-you-scan">6.3 Photos of sheet music (only when you scan)</h3>
+<p>If you photograph or import a page of sheet music, the app shrinks it so its longest side is 2,000 pixels, saves it as a JPEG and sends it over HTTPS to our music-recognition service. The service returns the notes it read. The request carries the image and nothing else: no installation identifier and no information about your phone.</p>
+<ul>
+<li><strong>How long we keep it.</strong> We may keep a scanned photo for up to 7 days to troubleshoot recognition problems. After 7 days it is deleted. The notes the service returns are stored on your phone, not by us.</li>
+<li><strong>Logs.</strong> The service records one line per request: the size of the upload, how long it took and how many staves it found. Not the photo, not a file name and not your internet address.</li>
+<li><strong>Overload protection.</strong> To stop one person overloading the service, it counts requests per internet address (10 pages every 10 minutes). The count is held in memory against a scrambled form of the address and disappears when the service goes idle. It is never written down. A photo over 8 MB is refused without being read.</li>
+<li><strong>Where.</strong> The service runs on Modal, operated by Modal Labs, Inc., a company in the United States, which processes the request for us. Modal states that it does not store the contents of requests to a service like ours.</li>
+</ul>
+<p>If you never use the scanner, no photo is ever sent. Photos of pages you save in your library are kept on your phone (section 7).</p>
+<h3 id="6-4-one-other-request">6.4 One other request</h3>
+<p>The app draws sheet music with a library built into it. If that built-in copy cannot be read, the app downloads the same library from a public content network (<code>cdn.jsdelivr.net</code>). That request sends nothing about you, but like any web request it shows your internet address to the network. All the music in the catalogue is built into the app; the app does not download pieces.</p>
+<h2 id="7-what-stays-on-your-phone">7. What stays on your phone</h2>
+<ul>
+<li>Your profile: experience level, daily goal, what you want to work on, and your assessment results. No name, email or age.</li>
+<li>Every practice session, with its timings and scores; your progress per piece, streaks, XP and achievements; your tone baseline.</li>
+<li>Your settings, and the record that you agreed to this policy: version, time, age range (under 13, 13 to 17, or 18 and over) and whether a parent or guardian confirmed. Not your birth month or year.</li>
+<li>Your saved scans: the page photos and the notes recognised from them.</li>
+<li>A local log of app events, deleted automatically after 30 days. Your progress screens read it. It never leaves your phone by itself; it can only be included in a bug report you choose to send.</li>
+</ul>
+<p>This data is in the app's private storage on your phone, which other apps cannot read and which we cannot read.</p>
+<p><strong>Android backup.</strong> If you have Android backup turned on, Android may copy the app's settings and progress to your Google account, so a new phone can restore them. That backup is made and held by Google under your Google account; we cannot access it. The app excludes your scanned page photos from every backup and excludes the per-session files from the cloud backup.</p>
+<h2 id="8-what-we-never-collect">8. What we never collect</h2>
+<p>Your name, email address (unless you write to us), phone number, postal address, date of birth (the month and year you type are used once on your phone and not kept), government ID, payment details, location, contacts, calendar, messages, call log, installed apps, browsing history, advertising ID, health data, and any recording of your playing.</p>
+<h2 id="9-why-we-process-it">9. Why we process it</h2>
+<div class="table"><table>
+<thead><tr><th scope="col">Purpose</th><th scope="col">What it uses</th></tr></thead>
+<tbody><tr><td>Making the app work</td><td>Practice data, settings and saved scans, on your phone</td></tr>
+<tr><td>Telling you whether you are in tune</td><td>Microphone sound, on your phone only</td></tr>
+<tr><td>Turning a photo of a page into notes you can practise</td><td>The sheet-music photo, sent to the recognition service</td></tr>
+<tr><td>Finding and fixing problems</td><td>Usage statistics, bug reports, and scanned photos kept for up to 7 days</td></tr>
+<tr><td>Learning which features are used, so we build the right things</td><td>Usage statistics</td></tr></tbody>
+</table></div>
+<p>We rely on your consent, given on the first screen, and you can withdraw it (section 11). We do not build profiles of you, do not show ads, do not sell or rent data, and make no automated decisions about you.</p>
+<h2 id="10-who-else-receives-it">10. Who else receives it</h2>
+<div class="table"><table>
+<thead><tr><th scope="col">Recipient</th><th scope="col">What</th><th scope="col">Where</th></tr></thead>
+<tbody><tr><td>PostHog, Inc.</td><td>Usage statistics and bug reports</td><td>United States</td></tr>
+<tr><td>Modal Labs, Inc.</td><td>Scanned sheet-music photos, while they are read and for up to 7 days after</td><td>United States company; the service may run outside India</td></tr></tbody>
+</table></div>
+<p>Both process data only on our instructions. We share data with no one else, and the app contains no advertising or tracking software from anyone else.</p>
+<p><strong>Transfers outside India.</strong> Usage statistics, bug reports and scanned photos are processed outside India, as shown above. Section 16 of the DPDP Act allows this except to countries the Government of India restricts by notification.</p>
+<p>We may disclose data if the law requires it.</p>
+<h2 id="11-your-choices-and-your-rights">11. Your choices and your rights</h2>
+<p><strong>Turn usage statistics off.</strong> Settings, Privacy, <strong>Share usage data &amp; bug reports</strong>. Turning it off is as easy as leaving it on, and takes effect immediately. This is how you withdraw consent to usage statistics. It does not delete what was already sent; write to us for that.</p>
+<p><strong>Delete data on your phone.</strong> Delete a saved scan from your library and its photos go with it. To erase everything the app holds on your phone, clear the app's storage in Android Settings (Apps, Rosin, Storage, Clear storage) or uninstall the app.</p>
+<p><strong>Your rights under the DPDP Act.</strong> You can ask us for a summary of the personal data we process about you and who we shared it with, ask us to correct, complete or erase it, raise a grievance, and nominate someone to exercise these rights for you if you die or cannot act yourself. Write to <a href="mailto:info@layamlabs.com">info@layamlabs.com</a>.</p>
+<p>The only link between events and your installation is the random identifier in section 6.1. To find or erase what was sent from your phone, we need that identifier: Settings shows it under Privacy with a Copy button. Once the app is uninstalled and the identifier is gone, we cannot find those events, because they hold nothing else that identifies you. Scanned photos carry no identifier at all; they are deleted within 7 days in any case.</p>
+<p><strong>How we answer.</strong> We acknowledge a request or grievance within 7 days and answer it in full within 30 days.</p>
+<p><strong>Data Protection Board of India.</strong> If you are not satisfied with our answer, you can complain to the Data Protection Board of India.</p>
+<h2 id="12-children">12. Children</h2>
+<p>Rosin can be used by children, and is listed on Google Play for all ages. A person under 18 uses Rosin with the agreement of a parent or guardian, which the first screen asks them to confirm (section 3).</p>
+<p><strong>For anyone under 13:</strong></p>
+<ul>
+<li>Practice works fully and everything it records stays on the phone (section 7).</li>
+<li>Nothing is sent to PostHog or any other analytics service: no usage statistics, no identifier, no bug report. A bug report is only copied to the clipboard, for a parent to send by email if they choose.</li>
+<li>The app has no ads, no advertising ID, no accounts, no chat and no way to share anything with other people.</li>
+<li>The one thing that can leave the phone is a photo of sheet music, and only when someone uses the scanner (section 6.3). It carries no identifier. Please photograph only the music page.</li>
+</ul>
+<p><strong>For 13 to 17:</strong> the same as for adults (sections 6 to 8), with the parent or guardian confirmation on the first screen. Usage statistics are on by default and can be turned off in Settings.</p>
+<p>The data is never used to build a profile of anyone, and nothing sent to us contains a name, an age, a birth date, a photo of the user or a recording.</p>
+<p>A parent or guardian can change the age range or turn usage statistics off in Settings, Privacy, at any time, clear the app's storage, or write to <a href="mailto:info@layamlabs.com">info@layamlabs.com</a> (with the identifier from Settings, for a user 13 or over) to have what was sent erased.</p>
+<h2 id="13-security">13. Security</h2>
+<p>Data on your phone is in Android's private app storage. Everything the app sends goes over HTTPS: the app refuses to start usage statistics if the PostHog address is not HTTPS, and refuses to send a scan to an address that is not HTTPS. We hold no accounts or passwords. If a breach affecting personal data happens, we will tell the Data Protection Board of India and each person affected, as the DPDP Act requires.</p>
+<h2 id="14-changes-to-this-policy">14. Changes to this policy</h2>
+<p>The version and effective date are at the top. When the app changes what it collects or who receives it, we update this policy first, and the app shows the first screen again so you can read and agree to the new version before it applies. Smaller wording changes are published here with a new date.</p>
+<h2 id="15-contact">15. Contact</h2>
+<p>Layam Labs, Bengaluru, India<br>
+Contact and Grievance Officer: Swaminathan Ravikumar, <a href="mailto:info@layamlabs.com">info@layamlabs.com</a></p>
+</main>
+<footer class="site"><p>Layam Labs, Bengaluru, India. <a href="mailto:info@layamlabs.com">info@layamlabs.com</a></p></footer>
+</body>
+</html>

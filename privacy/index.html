@@ -12,7 +12,7 @@
 <header class="site"><a class="brand" href="../">Layam Labs</a></header>
 <main class="doc">
 <h1>Rosin Privacy Policy</h1>
-<p><strong>Version:</strong> 2026-10-18. <strong>Effective:</strong> 18 October 2026.<br>
+<p><strong>Version:</strong> 2026-10-20. <strong>Effective:</strong> 20 October 2026.<br>
 <strong>Applies to:</strong> Rosin for Android, package <code>com.rosin.app</code>.</p>
 <h2 id="1-who-we-are">1. Who we are</h2>
 <p>Rosin is a violin practice app published by <strong>Layam Labs</strong>, based in Bengaluru, India. In this policy &quot;we&quot; and &quot;us&quot; mean Layam Labs.</p>
@@ -23,7 +23,7 @@
 <li>Rosin has no accounts. We never ask for your name, email address, phone number or location. The first screen asks when you were born (month and year) and keeps only an age range on your phone, never the date.</li>
 <li>Rosin listens to your violin to tell you whether you are in tune. That sound is analysed on your phone and is never sent anywhere.</li>
 <li>Your practice history, scores and settings are stored on your phone.</li>
-<li>Three things can leave your phone:<ol><li>anonymous usage statistics, which are on by default from age 13 and can be turned off in Settings. For anyone under 13 they are off and cannot be turned on;</li><li>a bug report, only if you write one and send it;</li><li>a photo of sheet music, only if you use the scanner.</li></ol></li>
+<li>Besides the update and settings checks in section 6.5, which run for everyone, three things can leave your phone:<ol><li>anonymous usage statistics, which are on by default from age 13 and can be turned off in Settings. For anyone under 13 they are off and cannot be turned on;</li><li>a bug report, only if you write one and send it;</li><li>a photo of sheet music, only if you use the scanner.</li></ol></li>
 <li>No ads, no advertising ID, and we do not sell or rent data to anyone.</li>
 </ul>
 <h2 id="3-who-can-use-rosin">3. Who can use Rosin</h2>
@@ -42,7 +42,7 @@
 <tr><td>Camera (<code>CAMERA</code>)</td><td>To photograph a page of sheet music for the scanner</td><td>You can still import a photo with the system photo picker, or not use the scanner</td></tr>
 <tr><td>Internet (<code>INTERNET</code>)</td><td>To send usage statistics, bug reports and scanned photos as described below</td><td>Granted by Android at install</td></tr></tbody>
 </table></div>
-<p>The app also uses permissions Android grants without asking, to control audio output (<code>MODIFY_AUDIO_SETTINGS</code>) and to vibrate on a button press (<code>VIBRATE</code>). It does not ask for your location, contacts, files, calendar, messages or call log.</p>
+<p>The app also uses permissions Android grants without asking, to control audio output (<code>MODIFY_AUDIO_SETTINGS</code>), to vibrate on a button press (<code>VIBRATE</code>) and to see whether the phone is online (<code>ACCESS_NETWORK_STATE</code>). It does not ask for your location, contacts, files, calendar, messages or call log.</p>
 <h2 id="5-your-microphone">5. Your microphone</h2>
 <ul>
 <li>Sound is captured only while a screen that needs it is open, at 16,000 samples per second in mono.</li>
@@ -53,18 +53,19 @@
 </ul>
 <h2 id="6-what-leaves-your-phone-and-when">6. What leaves your phone, and when</h2>
 <h3 id="6-1-anonymous-usage-statistics-on-by-default-from-age-13-you-can-turn-them-off">6.1 Anonymous usage statistics (on by default from age 13, you can turn them off)</h3>
-<p><strong>Under 13 none of this happens.</strong> The app does not start the statistics, makes no identifier and sends nothing to PostHog; the Settings switch is shown off and cannot be turned on. If the age range is changed to under 13 later, sending stops at once and anything waiting to be sent is discarded.</p>
+<p><strong>Under 13 none of this happens.</strong> The app does not start the statistics, makes no identifier and sends no events or bug reports to PostHog (only the settings check in section 6.5); the Settings switch is shown off and cannot be turned on. If the age range is changed to under 13 later, sending stops at once and anything waiting to be sent is discarded.</p>
 <p>From age 13, after you have agreed on the first screen, and while **Share usage data &amp; bug reports** is on in Settings, the app sends small events to PostHog, an analytics service that processes them for us. Each event carries:</p>
 <ul>
 <li>a random identifier for your installation, such as <code>anon_k3f9x2p1q8w4z7</code>. The app makes it from a random number. It is not taken from your phone, your Google account or anything about you, it is not an advertising ID, and reinstalling the app makes a new one. Settings shows it under Privacy so you can quote it to us;</li>
 <li>the platform (Android), the Android version, and whether the app is a developer build;</li>
+<li>the app's version and build number, which update of the app is running and when its built-in catalogue of pieces was made, and whether the phone is one of Google's Firebase Test Lab test phones;</li>
 <li>the event's name and a few properties, at most 1,024 bytes per event.</li>
 </ul>
 <p>The events record:</p>
 <ul>
 <li><strong>what you did:</strong> a screen was opened, a practice session started, finished or was stopped early (with the piece, the mode and the tempo), the tuner was used, an onboarding step was completed, a loop was set;</li>
 <li><strong>how it went, in totals:</strong> a session's accuracy, a run's intonation summary, an assessment score. Totals only, never a note-by-note stream;</li>
-<li><strong>what went wrong:</strong> the audio engine fell back, pitch detection degraded, a save failed, a scan came back unclear, a score could not be calculated.</li>
+<li><strong>what went wrong:</strong> the audio engine fell back, pitch detection degraded, a save failed, a scan came back unclear, a score could not be calculated; and the app crashed, froze or was closed by Android for using too much memory (the kind of failure, the error message, how much memory the app was using and which parts of the app's own code were running, without file paths or anything you typed).</li>
 </ul>
 <p>The events are sent over HTTPS to PostHog's US ingestion address, <code>https://us.i.posthog.com</code>. The app does not contain PostHog's software kit; it sends plain web requests carrying only the fields above. We have switched off session replay, screen recording, automatic capture, console and network capture, heatmaps and surveys in our PostHog project.</p>
 <p>PostHog, like any server, sees the internet (IP) address a request comes from. Our project is set to discard it, so IP addresses are not stored with events, and we have switched off PostHog's location lookup, so no country, city or coordinates are derived from it.</p>
@@ -72,12 +73,12 @@
 <h3 id="6-2-bug-reports-only-when-you-send-one">6.2 Bug reports (only when you send one)</h3>
 <p>Settings has <strong>Report a bug</strong>. Before anything is sent, the app shows you the whole report; what you see is what is sent. A report contains:</p>
 <ul>
-<li>the description you typed, exactly as you typed it. Please do not type anything you would not want us to read;</li>
+<li>the description you typed. Before sending, the app replaces any email address or file path in it with a placeholder; the preview shows exactly what will be sent. Please do not type anything else you would not want us to read;</li>
 <li>the severity you chose and the screen you were on;</li>
 <li>a snapshot of the app's internal state, such as which audio output and pitch engine were in use;</li>
 <li>up to the last 200 events, so we can see what led to the problem.</li>
 </ul>
-<p>Before it is sent, everything the app collected (not your typed description) is cleaned: titles, file names, search text and similar free text are replaced by a note of their length, and the account-name part of file paths is replaced by a placeholder. A report is at most 50,000 bytes.</p>
+<p>Before it is sent, everything the app collected is cleaned: titles, file names, search text and similar free text are replaced by a note of their length, and the account-name part of file paths is replaced by a placeholder. A report is at most 50,000 bytes.</p>
 <p>Bug reports go to PostHog with the usage statistics. If usage statistics are off, or have not started, or the age range is under 13, the report is copied to your phone's clipboard instead and nothing is sent; you decide whether to paste it into an email to us.</p>
 <h3 id="6-3-photos-of-sheet-music-only-when-you-scan">6.3 Photos of sheet music (only when you scan)</h3>
 <p>If you photograph or import a page of sheet music, the app shrinks it so its longest side is 2,000 pixels, saves it as a JPEG and sends it over HTTPS to our music-recognition service. The service returns the notes it read. The request carries the image and nothing else: no installation identifier and no information about your phone.</p>
@@ -91,7 +92,7 @@
 <h3 id="6-4-one-other-request">6.4 One other request</h3>
 <p>The app draws sheet music with a library built into it. If that built-in copy cannot be read, the app downloads the same library from a public content network (<code>cdn.jsdelivr.net</code>). That request sends nothing about you, but like any web request it shows your internet address to the network. All the music in the catalogue is built into the app; the app does not download pieces.</p>
 <h3 id="6-5-update-and-settings-checks">6.5 Update and settings checks</h3>
-<p>When your phone is online, the app checks for app updates and for remote settings (switches that turn a feature on or off). Update checks send a random ID made for this install; our update server does not log it. Settings checks go to PostHog, our analytics provider, and send no ID, only your device type (Android version, processor features and app version); PostHog receives your internet address but does not use it for location. Neither check is linked to your usage statistics, and both run for every user, including children under 13.</p>
+<p>When your phone is online, the app checks for app updates and for remote settings (switches that turn a feature on or off). Update checks send a random ID made for this install; our update server does not log it. Settings checks go to PostHog, our analytics provider. Each one carries a random ID made new for that one check, so two checks cannot be linked to each other or to you, plus the app's version (and which update of it is running), the Android version, and the phone's processor type and features. Only once the age range is 13 or over does a check also send the phone's make and model, the chip's make and model, and whether the app was installed from Google Play. PostHog receives your internet address but does not use it for location. Neither check is linked to your usage statistics, and both run for every user, including children under 13, so that a broken feature can be switched off for everyone.</p>
 <h2 id="7-what-stays-on-your-phone">7. What stays on your phone</h2>
 <ul>
 <li>Your profile: experience level, daily goal, what you want to work on, and your assessment results. No name, email or age.</li>
@@ -117,7 +118,7 @@
 <h2 id="10-who-else-receives-it">10. Who else receives it</h2>
 <div class="table"><table>
 <thead><tr><th scope="col">Recipient</th><th scope="col">What</th><th scope="col">Where</th></tr></thead>
-<tbody><tr><td>PostHog, Inc.</td><td>Usage statistics and bug reports</td><td>United States</td></tr>
+<tbody><tr><td>PostHog, Inc.</td><td>Usage statistics, bug reports and settings checks</td><td>United States</td></tr>
 <tr><td>Modal Labs, Inc.</td><td>Scanned sheet-music photos, while they are read and for up to 7 days after</td><td>United States company; the service may run outside India</td></tr></tbody>
 </table></div>
 <p>Both process data only on our instructions. We share data with no one else, and the app contains no advertising or tracking software from anyone else.</p>
@@ -135,9 +136,10 @@
 <p><strong>For anyone under 13:</strong></p>
 <ul>
 <li>Practice works fully and everything it records stays on the phone (section 7).</li>
-<li>Nothing is sent to PostHog or any other analytics service: no usage statistics, no identifier, no bug report. A bug report is only copied to the clipboard, for a parent to send by email if they choose.</li>
+<li>No usage statistics, identifier or bug report is sent to PostHog or any other analytics service. A bug report is only copied to the clipboard, for a parent to send by email if they choose.</li>
+<li>Two background checks still run, as for everyone (section 6.5): the update check, to our own update server, which does not log the random ID it carries, and the settings check, which goes to PostHog with the app's version, the Android version and the processor type, and an ID made new for each check. No phone make or model is sent for anyone under 13. These checks let us switch off a broken feature quickly.</li>
 <li>The app has no ads, no advertising ID, no accounts, no chat and no way to share anything with other people.</li>
-<li>The one thing that can leave the phone is a photo of sheet music, and only when someone uses the scanner (section 6.3). It carries no identifier. Please photograph only the music page.</li>
+<li>Apart from those checks, the one thing that can leave the phone is a photo of sheet music, and only when someone uses the scanner (section 6.3). It carries no identifier. Please photograph only the music page.</li>
 </ul>
 <p><strong>For 13 to 17:</strong> the same as for adults (sections 6 to 8), with the parent or guardian confirmation on the first screen. Usage statistics are on by default and can be turned off in Settings.</p>
 <p>The data is never used to build a profile of anyone, and nothing sent to us contains a name, an age, a birth date, a photo of the user or a recording.</p>
